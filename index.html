@@ -102,6 +102,24 @@
             et eaque amet sequi tempore laudantium deleniti, quas nam saepe suscipit nihil quam aliquam in obcaecati mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ad non molestias at ipsam quia necessitatibus aut. Beatae
             nulla consequatur saepe nesciunt! Sit ut dolorum perferendis praesentium distinctio eos modi.</p>
     </main>
+    <script>
+        const nav = document.querySelector('nav');
+        const header = document.querySelector('header');
+        const initialNavPosition = nav.offsetTop;
+        const handleScroll = (e) => {
+            if (pageYOffset >= initialNavPosition) {
+                nav.classList.add('fixed');
+                /* prevent jumpy behaviour */
+                header.style.marginBottom = `${nav.offsetHeight}px`;
+            } else {
+                nav.classList.remove('fixed');
+                header.style.marginBottom = `0px`;
+
+            }
+        }
+
+        document.addEventListener('scroll', handleScroll);
+    </script>
 </body>
 
 </html>
