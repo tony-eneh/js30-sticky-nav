@@ -6,6 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sticky Nav</title>
+
+    <style>
+        /*declare variables*/
+        
+         :root {
+            --highlight: crimson;
+            --background: rgb(235, 233, 233);
+        }
+        
+        body {
+            margin: 0;
+            color: var(--highlight);
+            background-color: var(--background);
+            font-size: large;
+        }
+        
+        div.head {
+            text-align: center;
+        }
+        
+        a {
+            color: inherit;
+            display: inline-block;
+            /* 100/6 */
+            width: 15%;
+            text-decoration: none;
+            font-variant: small-caps;
+            font-size: larger;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            color: var(--background);
+            background-color: var(--highlight);
+            line-height: 3;
+            width: 100vw;
+        }
+        
+        .fixed {
+            position: fixed;
+            top: 0px;
+        }
+        
+        main {
+            margin: 0 auto;
+            width: 80%;
+            text-align: justify;
+            border: solid 1px rgb(161, 161, 161);
+            padding: 1em;
+            box-shadow: 10px 10px 8px #a5a5a5;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +68,7 @@
             <h1>Welcome to our Sticky Site</h1>
         </div>
         <nav>
-            <a href="">logos</a>
+            <a href="">Logos</a>
             <a href="">Home</a>
             <a href="">Services</a>
             <a href="">About Us</a>
